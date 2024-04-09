@@ -12,16 +12,16 @@ void enviarSenal(int marca, int numTecla) {
   Serial.println("Marca: " + String(marca) + " Tecla: " + String(numTecla));
   if (marca == 101) {
     enviarSenalSamsung(numTecla);
+    Serial.println("Ejecutado");
   } else if (marca == 102) {
     enviarSenalSony(numTecla);
+    Serial.println("Ejecutado");
   }
 }
 void enviarSenalSamsung(int tecla) {
   switch (tecla) {
   case 1:
     // Power Off
-
-    Serial.println("Ejecutado");
     IrSender.sendSamsung(0x707, 0x2, 1);
     break;
   case 2:

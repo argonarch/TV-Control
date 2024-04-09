@@ -5,6 +5,8 @@ void loop() {
   while (Serial.available() == 0) {
   }
   int marca = Serial.parseInt();
-  Serial.println("Escribiste: " + String(marca));
-  enviarSenal(marca, POWEROFF);
+  int codigo = Serial.parseInt();
+  Serial.println("Escribiste: " + String(marca) +
+                 ", Codigo: " + String(codigo));
+  enviarSenal(marca, codigo);
 }
