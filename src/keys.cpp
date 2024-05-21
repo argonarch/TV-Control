@@ -12,6 +12,7 @@ void enviarSenal(int marca, int numTecla) {
   Serial.println("Marca: " + String(marca) + " Tecla: " + String(numTecla));
   if (marca == 101) {
     enviarSenalSamsung(numTecla);
+    enviarSenalSamsung(numTecla);
     Serial.println("Ejecutado");
   } else if (marca == 102) {
     enviarSenalSony(numTecla);
