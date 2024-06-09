@@ -29,4 +29,4 @@
 
 #define SAMSUNG_M 101
 #define SONY_M 102
-void enviarSenal(int marca, int numTecla);
+String enviarSenal(int marca, int numTecla);
